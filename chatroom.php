@@ -7,7 +7,7 @@ $username = $_GET["username"];
     <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/2.3.0/socket.io.js"></script>
     <script type="text/javascript">
         var username = "<?php echo $username; ?>";
-        var io = io("3.6.233.23:8237");
+        var io = io("ws://3.6.233.23:8237");
         io.emit('ident', username, function(){
             console.log("Joined the chatroom");
         });
